@@ -3,7 +3,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 from dotenv import load_dotenv
 from itertools import islice
-
+import sys
 
 load_dotenv()
 
@@ -98,12 +98,12 @@ def main(playlistID):
     artists = genresANDartists[1]
     sortedGenres = sortGenres(genres)
     sortedArtists = sortArtists(artists)
+
     print(sortedGenres)
+    print("|||||")
     print(sortedArtists)
 
-    
-    
 
 if __name__ == "__main__":
-    TEST_PLAYLIST = "0obEJIDsrmoXkU6Uulwq7F"
+    TEST_PLAYLIST = sys.argv[1]
     main(TEST_PLAYLIST)
