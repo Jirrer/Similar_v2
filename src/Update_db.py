@@ -6,6 +6,8 @@ import spotipy
 
 load_dotenv()
 
+def parseSong()
+
 def updateDB(songs):
     conn = sqlite3.connect("Spotify_IDs.db")
     cursor = conn.cursor()
@@ -19,12 +21,6 @@ def updateDB(songs):
     conn.commit()
     conn.close()
 
-
-
-
-
-songs = {'7MOQrtXMNImAq5TrPZzC0w': "rock,grunge", '0DkmhHO4yyqCJFjosmmWPU': "rock,grunge"}
-updateDB(songs)
 
 
 

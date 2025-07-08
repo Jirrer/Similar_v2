@@ -89,21 +89,29 @@ def sortArtists(artists):
 
     return values
 
+def getOriginalSongs(playlistID):
+    songs = getSongs(playlistID)
+    ids = set()
+    for item in songs['items']:
+        track = item.get('track')
+        if track and track.get('id'):
+            ids.add(track['id'])
+    return ids
 
-        
-def main(playlistID):
+def getOriginalSongsFromData(songs):
+    ids = set()
+    for item in songs['items']:
+        track = item.get('track')
+        if track and track.get('id'):
+            ids.add(track['id'])
+    return ids
+
+def processPlaylist(playlistID):
     songs = getSongs(playlistID)
     genresANDartists = getGenresAndArtists(songs)
     genres = genresANDartists[0]
     artists = genresANDartists[1]
     sortedGenres = sortGenres(genres)
     sortedArtists = sortArtists(artists)
-
-    print(sortedGenres)
-    print("|||||")
-    print(sortedArtists)
-
-
-if __name__ == "__main__":
-    TEST_PLAYLIST = sys.argv[1]
-    main(TEST_PLAYLIST)
+    originalIDs = getOriginalSongsFromData(songs)
+    return (sortedGenres, sortedArtists, originalIDs)
