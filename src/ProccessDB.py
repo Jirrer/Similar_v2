@@ -1,25 +1,24 @@
 import sqlite3
 
-# Connect to your database
-conn = sqlite3.connect('Spotify_IDs.db')
-cursor = conn.cursor()
+def fetchSongs(genres):
+    genresTypes = list(genres.keys())
 
-# The search terms
-genre_search = 'rock'
-artist_search = '3qm845BOgUEQ2vn4fUTTFC'
+    conn = sqlite3.connect('Spotify_IDs.db')
+    cursor = conn.cursor()
 
-# Execute query with partial matching using LIKE and parameters
-cursor.execute("""
-    SELECT * FROM songs
-    WHERE genres LIKE ? OR artists LIKE ?
-""", (f'%{genre_search}%', f'%{artist_search}%'))
+    clauses = []
+    params = []
 
-# Fetch all matching rows
-results = cursor.fetchall()
+    for genre in genresTypes:
+        clauses.append("genres LIKE ?")
+        params.append(f"%{genre}%")
 
-# Print results
-for row in results:
-    print(row)
+    statement = " OR ".join(clauses)
 
-# Close connection
-conn.close()
+    query = f"SELECT * FROM songs WHERE {statement}"
+    cursor.execute(query, params)
+
+    results = cursor.fetchall()
+    conn.close()
+    
+    return results
