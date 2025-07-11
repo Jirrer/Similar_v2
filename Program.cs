@@ -1,3 +1,4 @@
+using System.Drawing.Drawing2D;
 namespace Similar_v2;
 
 static class Program
@@ -6,10 +7,11 @@ static class Program
     ///  The main entry point for the application.
     /// </summary>
     [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrame());
-        } 
+    static void Main()
+    {
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new MainFrame());
+    } 
+    
 }

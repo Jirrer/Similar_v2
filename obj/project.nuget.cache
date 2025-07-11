@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Lr2NnNWdZiU=",
+  "dgSpecHash": "XlG6ceSsa1A=",
   "success": true,
   "projectFilePath": "C:\\Projects\\Similar\\Similar_v2\\Similar_v2.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jrirr\\.nuget\\packages\\microsoft.web.webview2\\1.0.3351.48\\microsoft.web.webview2.1.0.3351.48.nupkg.sha512"
+  ],
   "logs": []
 }

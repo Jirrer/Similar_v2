@@ -1,0 +1,6 @@
+2025/07/11-16:17:54.068 37d4 Reusing MANIFEST C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Similar_v2.exe.WebView2\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/11-16:17:54.073 37d4 Recovering log #17
+2025/07/11-16:17:54.075 37d4 Reusing old log C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Similar_v2.exe.WebView2\EBWebView\Default\Local Storage\leveldb/000017.log 
+2025/07/11-16:18:36.145 6958 Level-0 table #20: started
+2025/07/11-16:18:36.151 6958 Level-0 table #20: 27068 bytes OK
+2025/07/11-16:18:36.153 6958 Delete type=0 #17

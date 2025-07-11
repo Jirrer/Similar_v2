@@ -6,16 +6,14 @@ namespace Similar_v2
     {
         public PlaylistFrame()
         {
-            this.Text = "Second Form";
-            this.Width = 250;
-            this.Height = 150;
+            this.Text = "Similar_v2 - New Playlist";
+            this.Width = 1280;
+            this.Height = 720;
 
-            Label label = new Label();
-            label.Text = "Hello from the second form!";
-            label.AutoSize = true;
-            label.Location = new System.Drawing.Point(40, 50);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Maximized;
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#4A94D4");
 
-            this.Controls.Add(label);
         }
     }
 }

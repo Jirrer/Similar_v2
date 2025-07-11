@@ -15,3 +15,14 @@ C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\Similar_v2.genruntimecon
 C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\ref\Similar_v2.dll
 C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\Similar_v2.MainFrame.resources
 C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\Similar_v2.csproj.GenerateResource.cache
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.dll
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Core.xml
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
+C:\Projects\Similar\Similar_v2\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
+C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\Similar_v2.csproj.AssemblyReference.cache
+C:\Projects\Similar\Similar_v2\obj\Debug\net8.0-windows\Similar_v2.csproj.Up2Date
