@@ -75,7 +75,7 @@ def updateDB(songsArr):
 
 
 
-songs = getArtistSongs('6deZN1bslXzeGvOLaLMOIF')
+songs = getArtistSongs('43sZBwHjahUvgbx1WNIkIz')
 updateDB(songs)
 
 
