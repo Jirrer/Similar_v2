@@ -1,0 +1,1 @@
+csc /t:winexe /out:Similar_v2.exe /win32icon:ico/logo.ico Similar_v2.cs

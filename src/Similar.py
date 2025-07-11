@@ -114,15 +114,15 @@ def filterOutOriginals(candidateList, originalIDs):
     return [item for item in candidateList if item[0] not in originalIDs]
 
 def main():
-    playlist = '7y0cXpxR4j1JSJaAvOfyZ0'
+    playlist = '0obEJIDsrmoXkU6Uulwq7F'
 
     playlistInfo = processPlaylist(playlist)
     weightedList = createWeightedList(playlistInfo, getSongs(playlistInfo[0]))
     sortedList = sortList(weightedList)
-    originalIDs = filterOutOriginals(sortedList, getOriginalSongIds(playlist))
+    originalIDs = filterOutOriginals(sortedList, playlistInfo[2])
     newPlaylist = createNewPlaylist(originalIDs)
 
-
+    print("\n\n")
     for x in newPlaylist:
         print(x)
 
