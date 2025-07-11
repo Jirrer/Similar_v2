@@ -104,11 +104,7 @@ def createNewPlaylist(lst):
     midSlice = lst[high:mid]
     lowSlice = lst[mid:low]
 
-    
-
-
     # for testing it is fixed values
-    # newPlaylistLength * (2 / 3))
     lowOutput = findSimilars(lowSlice, 5)
     midOutput = findSimilars(midSlice, 5)
     highOutput = findSimilars(highSlice, newPlaylistLength - (len(lowOutput) + len(midOutput)))
@@ -144,10 +140,12 @@ def filterOutOriginals(candidateList, originalIDs):
     return [item for item in candidateList if item[0] not in originalIDs]
 
 def main():
-    playlistInfo = processPlaylist('0obEJIDsrmoXkU6Uulwq7F')
+    playlist = '7y0cXpxR4j1JSJaAvOfyZ0'
+
+    playlistInfo = processPlaylist(playlist)
     weightedList = createWeightedList(playlistInfo)
     sortedList = sortList(weightedList)
-    originalIDs = filterOutOriginals(sortedList, getOriginalSongs('0obEJIDsrmoXkU6Uulwq7F'))
+    originalIDs = filterOutOriginals(sortedList, getOriginalSongs(playlist))
     newPlaylist = createNewPlaylist(originalIDs)
 
 

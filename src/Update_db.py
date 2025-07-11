@@ -75,8 +75,15 @@ def updateDB(songsArr):
 
 
 
-songs = getArtistSongs('43sZBwHjahUvgbx1WNIkIz')
-updateDB(songs)
+arrayOfSongs = ['6BdSOHfQ6kMg0tbAFlXR1z', 
+                '3Ayl7mCk0nScecqOzvNp6s', 
+                '6qXwLwTLdA44HYsA26vaNU',
+                '3886aFez2HDLkio5tUzmP6',
+                '0etNimDSQLWFbktPBHQ5vb'
+                ]
+for x in arrayOfSongs:
+    songs = getArtistSongs(x)
+    updateDB(songs)
 
 
 
