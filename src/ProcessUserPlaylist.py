@@ -89,7 +89,7 @@ def sortArtists(artists):
 
     return values
 
-def getOriginalSongs(playlistID):
+def getOriginalSongIds(playlistID):
     songs = getSongs(playlistID)
     ids = set()
     for item in songs['items']:

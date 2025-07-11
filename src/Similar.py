@@ -1,5 +1,6 @@
-from ProcessUserPlaylist import processPlaylist, getOriginalSongs
+from ProcessUserPlaylist import processPlaylist, getOriginalSongIds
 from ProccessDB import fetchSongs
+from ProcessPulledData import createWeightedList
 import random
 
 newPlaylistLength = 30 # number of new songs
@@ -9,33 +10,6 @@ def getSongs(genres):
 
     return songs
 
-def createWeightedList(playlistInfo):
-    songsFromDB = getSongs(playlistInfo[0])
-
-    output = [None] * len(songsFromDB)
-
-    userGenres = playlistInfo[0]
-    userArtists = playlistInfo[1]
-
-    weight = 0
-    count = 0
-    for song in songsFromDB:
-        songGenres = song[1].split(',')
-        songArtist = song[2].split(',')
-
-        for genre in songGenres:
-            if genre in userGenres:
-                weight += userGenres[genre]
-
-        for artist in songArtist:
-            if artist in userArtists:
-                weight += userArtists[artist]
-
-        output[count] = (song[0], weight)
-        count += 1
-        weight = 0
-
-    return output
         
 def sortList(lst):
     sorted_songs = sorted(lst, key=lambda x: x[1], reverse=True)
@@ -143,9 +117,9 @@ def main():
     playlist = '7y0cXpxR4j1JSJaAvOfyZ0'
 
     playlistInfo = processPlaylist(playlist)
-    weightedList = createWeightedList(playlistInfo)
+    weightedList = createWeightedList(playlistInfo, getSongs(playlistInfo[0]))
     sortedList = sortList(weightedList)
-    originalIDs = filterOutOriginals(sortedList, getOriginalSongs(playlist))
+    originalIDs = filterOutOriginals(sortedList, getOriginalSongIds(playlist))
     newPlaylist = createNewPlaylist(originalIDs)
 
 
