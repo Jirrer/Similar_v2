@@ -114,7 +114,6 @@ namespace Similar_v2
                 }
 
 
-
                 Runtime.PythonDLL = @"python313.dll";
 
                 PythonEngine.Initialize();
@@ -123,7 +122,7 @@ namespace Similar_v2
                 {
                     var pythonScript = Py.Import(@"src\Similar");
                 }
-                
+
 
 
                 PythonEngine.Shutdown();
