@@ -119,6 +119,11 @@ namespace Similar_v2
 
                 PythonEngine.Initialize();
 
+                using (Py.GIL())
+                {
+                    var pythonScript = Py.Import(@"src\Similar");
+                }
+
 
                 PythonEngine.Shutdown();
 
