@@ -1,4 +1,5 @@
 import random
+
 weightedList = None
 
 def genreAndArtist(userPlaylist, pulledSongs):

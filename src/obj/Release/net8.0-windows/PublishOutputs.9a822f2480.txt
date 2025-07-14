@@ -1,0 +1,15 @@
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Similar_v2.exe
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\runtimes\win-x86\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\runtimes\win-x64\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Similar_v2.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Similar_v2.deps.json
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Similar_v2.runtimeconfig.json
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Similar_v2.pdb
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Python.Runtime.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.dll
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Core.xml
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.WinForms.xml
+C:\Projects\Similar\Similar_v2\src\bin\Release\net8.0-windows\publish\Microsoft.Web.WebView2.Wpf.xml
