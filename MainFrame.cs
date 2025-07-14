@@ -112,33 +112,15 @@ namespace Similar_v2
                     MessageBox.Show("Invalid link.");
                     return;
                 }
-                
 
-                var pythonDllPath = @"C:\msys64\ucrt64\bin";
-                var oldPath = Environment.GetEnvironmentVariable("PATH") ?? "";
-                if (!oldPath.Contains(pythonDllPath))
-                {
-                    Environment.SetEnvironmentVariable("PATH", oldPath + ";" + pythonDllPath);
-                }
-                
+
+
+                Runtime.PythonDLL = @"python313.dll";
+
                 PythonEngine.Initialize();
 
-                // using (Py.GIL())
-                // {
-                //     dynamic sys = Py.Import("sys");
-                //     sys.path.append("src"); // adjust path
 
-                //     dynamic script = Py.Import("Similar"); // without .py
-                //     dynamic playlist = script.get_playlist();
-
-                //     foreach (dynamic songId in playlist)
-                //     {
-                //         MessageBox.Show(songId.ToString());
-                //     }
-                // }
-
-                // PythonEngine.Shutdown();
-
+                PythonEngine.Shutdown();
 
 
 
