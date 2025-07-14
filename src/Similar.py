@@ -2,6 +2,7 @@ from ProcessUserPlaylist import processPlaylist, getOriginalSongIds
 from ProccessDB import fetchSongs
 from ProcessPulledData import createWeightedList
 import random
+import os
 
 newPlaylistLength = 30 # number of new songs
 
@@ -114,6 +115,7 @@ def filterOutOriginals(candidateList, originalIDs):
     return [item for item in candidateList if item[0] not in originalIDs]
 
 def main():
+    directory = os.getcwd()
     playlist = '0obEJIDsrmoXkU6Uulwq7F'
 
     playlistInfo = processPlaylist(playlist)
@@ -122,10 +124,8 @@ def main():
     originalIDs = filterOutOriginals(sortedList, playlistInfo[2])
     newPlaylist = createNewPlaylist(originalIDs)
 
-    print("\n\n")
-    for x in newPlaylist:
-        print(x)
+    return newPlaylist
 
 
-if __name__ == "__main__":
+def GET_PLAYLIST():
     main()

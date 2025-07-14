@@ -49,6 +49,14 @@
             "Microsoft.Web.WebView2": {
               "target": "Package",
               "version": "[1.0.3351.48, )"
+            },
+            "Python.Runtime": {
+              "target": "Package",
+              "version": "[2.7.9, )"
+            },
+            "pythonnet": {
+              "target": "Package",
+              "version": "[3.0.5, )"
             }
           },
           "imports": [

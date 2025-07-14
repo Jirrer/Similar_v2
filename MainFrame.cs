@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.WinForms;
+using Python.Runtime;
 
 namespace Similar_v2
 {
@@ -97,19 +98,49 @@ namespace Similar_v2
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // Prevents newline
+                e.SuppressKeyPress = true;
 
-                string playlistLink = playlistBox.Text;
-
+           
+                
                 this.Controls.Clear();
                 songLabels.Clear();
                 addTextBox();
 
+                string playlistLink = playlistBox.Text;
                 if (!validId(playlistLink))
                 {
-                    Console.WriteLine("bad link");
+                    MessageBox.Show("Invalid link.");
                     return;
                 }
+                
+
+                var pythonDllPath = @"C:\msys64\ucrt64\bin";
+                var oldPath = Environment.GetEnvironmentVariable("PATH") ?? "";
+                if (!oldPath.Contains(pythonDllPath))
+                {
+                    Environment.SetEnvironmentVariable("PATH", oldPath + ";" + pythonDllPath);
+                }
+                
+                PythonEngine.Initialize();
+
+                // using (Py.GIL())
+                // {
+                //     dynamic sys = Py.Import("sys");
+                //     sys.path.append("src"); // adjust path
+
+                //     dynamic script = Py.Import("Similar"); // without .py
+                //     dynamic playlist = script.get_playlist();
+
+                //     foreach (dynamic songId in playlist)
+                //     {
+                //         MessageBox.Show(songId.ToString());
+                //     }
+                // }
+
+                // PythonEngine.Shutdown();
+
+
+
 
                 float totalWidth = this.ClientSize.Width;
                 float padding = totalWidth * 0.05f;  // 5% padding on left and right
@@ -149,7 +180,7 @@ namespace Similar_v2
                     "70LcF31zb1H0PyJoS1Sx1r",
                     "70LcF31zb1H0PyJoS1Sx1r"
                 };
-                
+
                 for (int i = 0; i < 30; i++)
                 {
                     int row = i / 2;
