@@ -123,6 +123,7 @@ namespace Similar_v2
                 {
                     var pythonScript = Py.Import(@"src\Similar");
                 }
+                
 
 
                 PythonEngine.Shutdown();
