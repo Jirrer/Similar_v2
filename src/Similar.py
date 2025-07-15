@@ -124,6 +124,8 @@ def main():
     originalIDs = filterOutOriginals(sortedList, playlistInfo[2])
     newPlaylist = createNewPlaylist(originalIDs)
 
+    print(newPlaylist)
+
     return newPlaylist
 
 
