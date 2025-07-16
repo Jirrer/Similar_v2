@@ -1,9 +1,13 @@
+import os
 import sqlite3
 
 def fetchSongs(genres):
     genresTypes = list(genres.keys())
 
-    conn = sqlite3.connect('Spotify_IDs.db')
+    base_path = os.path.dirname(__file__)
+    db_path = os.path.join(base_path, "Spotify_IDs.db")
+
+    conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     clauses = []

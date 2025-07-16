@@ -115,7 +115,6 @@ def filterOutOriginals(candidateList, originalIDs):
     return [item for item in candidateList if item[0] not in originalIDs]
 
 def main():
-    # directory = os.getcwd()
     playlist = '0obEJIDsrmoXkU6Uulwq7F'
 
     playlistInfo = processPlaylist(playlist)
@@ -124,10 +123,14 @@ def main():
     originalIDs = filterOutOriginals(sortedList, playlistInfo[2])
     newPlaylist = createNewPlaylist(originalIDs)
 
-    print(newPlaylist)
+    # print(newPlaylist)
 
     return newPlaylist
 
 
 def GET_PLAYLIST():
     return main()
+
+
+# if __name__ == "__main__":
+#     main()
